@@ -55,7 +55,7 @@ PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia
                             </div>
                             <h3 class="text-uppercase">{{ $dt['nama'] }}</h3>
                             <p class="product-price"><span>Harga</span> Rp. {{ number_format($dt['harga'],0, '.', '.' )  }} </p>
-                            <a href=" https://api.whatsapp.com/send?phone=6282126909916&text=Halo%21%20Saya ingin memesan {{ strtoupper($dt['nama']) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan</a>
+                            <a target="_blank" href=" https://api.whatsapp.com/send?phone=6282126909916&text=Halo%21%20Saya ingin memesan {{ strtoupper($dt['nama']) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan</a>
                         </div>
                     </div>
                 @endforeach

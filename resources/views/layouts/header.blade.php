@@ -34,8 +34,8 @@
                                 </ul>
                             </li> --}}
                             {{-- <li><a href="news.html">Produk</a></li> --}}
-                            <li {{ Request::is('kontak') ? 'current-list-item' : '' }}><a href="./kontak">Kontak</a></li>
-                            <li {{ Request::is('produk') ? 'current-list-item' : '' }}><a href="./produk">Katalog Produk</a></li>                            
+                            <li class="{{ Request::is('kontak') ? 'current-list-item' : '' }}"><a href="./kontak">Kontak</a></li>
+                            <li class="{{ Request::is('produk') ? 'current-list-item' : '' }}"><a href="./produk">Katalog Produk</a></li>                            
                             {{-- <li><a href="./jasa">Jasa</a></li> --}}
                             <li>
                                 <div class="header-icons">

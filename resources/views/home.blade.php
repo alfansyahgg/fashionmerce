@@ -27,8 +27,8 @@ PT BERKAH CIPTA KARYA BERSAMA
                                 Penyedia barang dan jasa pakaian, seragam TNI, POLRI, SATPOL PP, Jaket Training
                             </p>
 							<div class="hero-btns">
-								<a href="shop.html" class="boxed-btn">Koleksi Produk</a>
-								<a href="contact.html" class="bordered-btn">Kontak Kami</a>
+								<a href="produk" class="boxed-btn">Koleksi Produk</a>
+								<a href="kontak" class="bordered-btn">Kontak Kami</a>
 							</div>
 						</div>
 					</div>
@@ -111,7 +111,7 @@ PT BERKAH CIPTA KARYA BERSAMA
 			</div>
             <div class="row">
 				<div class="col-lg-12 text-center">
-					<a href="news.html" class="boxed-btn">Produk Lainnya</a>
+					<a href="produk" class="boxed-btn">Produk Lainnya</a>
 				</div>
 			</div>
 		</div>
