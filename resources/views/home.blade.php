@@ -97,14 +97,24 @@ PT BERKAH CIPTA KARYA BERSAMA
 
 			<div class="row">
 				@foreach ($data as $dt)
-				<div class="col-lg-4 col-md-6 text-center {{ $dt['kategori'] }}">
+				<div class="col-lg-4 col-md-6 text-center {{ $dt->nama_kategori }}">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="assets/img/produk/{{ $dt['image'] }}.png" alt=""></a>
+						<div class="owl-carousel owl-theme">
+							@foreach ($allData as $ad)
+								@if ($dt->produk_id == $ad->produk_id)
+									<div class="product-image">
+										<a href="{{ route('home.produk.id', $dt->slug) }}"><img src="{{url('assets/img/produk').'/'.$ad->gambar }}" alt=""></a>
+									</div>									
+								@endif								
+							@endforeach
 						</div>
-						<h3 class="text-uppercase">{{ $dt['nama'] }}</h3>
-						<p class="product-price"><span>Harga</span> Rp. {{ number_format($dt['harga'],0, '.', '.' )  }} </p>
-						<a target="_blank" href=" https://api.whatsapp.com/send?phone=6282126909916&text=Halo%21%20Saya ingin memesan {{ strtoupper($dt['nama']) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan</a>
+						<a href="{{ route('home.produk.id', $dt->slug) }}"><h3 class="text-uppercase">{{ strtoupper($dt->nama) }}</h3></a>
+						<p class="product-price"><span>Harga</span> Rp. {{ number_format($dt->harga,0, '.', '.' )  }} </p>
+						<a target="_blank" href=" https://api.whatsapp.com/send?phone=6282126909916&text=Halo%21%20Saya ingin memesan {{ strtoupper($dt->nama) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan</a>
+						<a target="_blank" href="{{ route('home.produk.id', $dt->slug) }}" class="detail-btn">
+							<i class="fas fa-bullseye    "></i>
+							Lihat Detail
+						</a>
 					</div>
 				</div>
 				@endforeach
@@ -118,10 +128,6 @@ PT BERKAH CIPTA KARYA BERSAMA
 	</div>
 	<!-- end product section -->
 
-	<!-- cart banner section -->
-	
-    <!-- end cart banner section -->
-
 	<!-- testimonail-section -->
 	<div class="testimonail-section mt-150 mb-150">
 		<div class="container">
@@ -131,12 +137,12 @@ PT BERKAH CIPTA KARYA BERSAMA
 					<div class="testimonial-sliders">
 						<div class="single-testimonial-slider">
 							<div class="client-avater">
-								<img src="assets/img/avaters/avatar1.png" alt="">
+								<img src="{{ url('assets/img/avaters/avatar1.png') }}" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>Saira Hakim <span>Local shop owner</span></h3>
+								<h3>Rismi Shafira</h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" Pelayanan bagus dan hasilnya memuaskan. Gak nyesel pesan disini "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -145,12 +151,12 @@ PT BERKAH CIPTA KARYA BERSAMA
 						</div>
 						<div class="single-testimonial-slider">
 							<div class="client-avater">
-								<img src="assets/img/avaters/avatar2.png" alt="">
+								<img src="{{ url('assets/img/avaters/avatar2.png') }}" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>David Niph <span>Local shop owner</span></h3>
+								<h3>Aditya Nur Hakim</h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" Hanya disini bahan bagus, berkualitas dan harganya murah. Semoga makin sukses "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -159,12 +165,12 @@ PT BERKAH CIPTA KARYA BERSAMA
 						</div>
 						<div class="single-testimonial-slider">
 							<div class="client-avater">
-								<img src="assets/img/avaters/avatar3.png" alt="">
+								<img src="{{ url('assets/img/avaters/avatar3.png') }}" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>Jacob Sikim <span>Local shop owner</span></h3>
+								<h3>Doni Firmansyah</h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" Saya bersyukur bisa menemukan website ini.Saya bisa dapat produk yang murah dan berkualitas.  "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -209,74 +215,6 @@ PT BERKAH CIPTA KARYA BERSAMA
     
 	<!-- end shop banner -->
 
-	<!-- latest news -->
-	<div class="latest-news pt-150 pb-150">
-		<div class="container">
-
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-title">	
-						<h3><span class="orange-text">Kabar Terbaru dari Kami</span></h3>
-						<p>
-                            Informasi terkini tentang kami.
-                        </p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<a href="news.html" class="boxed-btn">More News</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end latest news -->
-
 	<!-- logo carousel -->
 	<div class="logo-carousel-section">
 		<div class="container">
@@ -309,3 +247,24 @@ PT BERKAH CIPTA KARYA BERSAMA
 	<!-- end logo carousel -->
 	
 @endsection
+
+@push('scripts')
+	<script>
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+    			lazyLoad:true,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:1
+					},
+					1000:{
+						items:1
+					}
+				}
+			})
+		})
+	</script>
+@endpush

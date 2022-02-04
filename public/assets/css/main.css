@@ -2398,7 +2398,7 @@ ul.social-link-team li a {
   margin: 15px;
   border: 2px solid #A86463;
   color: #323232;
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 8px 20px;
   border-radius: 25px;
 }
@@ -2763,4 +2763,25 @@ table.order-details tbody td {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+}
+
+/* Added */
+
+.product-filters ul li a{
+  color: inherit;
+}
+
+a.detail-btn{
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  background-color: #034ce9;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+a.detail-btn:hover{
+  border: 1px solid #034ce9;
+  background-color: #fff;
+  color: #034ce9;
 }
