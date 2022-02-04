@@ -9,7 +9,7 @@ PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia
 @endsection
 
 @section('title')
-    Single Product
+    {{ $data[0]->nama }}
 @endsection
 
 @push('css')

@@ -62,7 +62,7 @@
                                     <a href="javascript:void(0)" onclick="document.querySelector('#formLogout').submit()">Logout</a>
                                 </li>
                             @else
-                                <li class="{{ Request::is('login') ? 'current-list-item' : '' }}"><a href="./login">Login</a></li>   
+                                <li class="{{ Request::is('login') ? 'current-list-item' : '' }}"><a href="{{ route('login') }}">Login</a></li>   
                             @endif
 
                             <li>
