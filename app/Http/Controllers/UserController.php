@@ -75,10 +75,10 @@ class UserController extends Controller
     {
         $input = $request->all();
         $pw = $request->input('epassword');
-        if(!isset($pw)){
+        if(isset($pw)){
             $input['password'] = bcrypt($pw);
         }
-
+        
         $model = User::find($id);
         $model->update($input);
         return redirect()->route('user.index')->with('update', '1');
