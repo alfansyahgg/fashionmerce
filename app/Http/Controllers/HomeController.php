@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\InformasiModel;
 use App\Models\KategoriModel;
 use App\Models\User;
 use Illuminate\Contracts\Pagination\Paginator;
@@ -28,25 +29,31 @@ class HomeController extends Controller
             }
         }
 
+        $informasis = InformasiModel::first();
+
         // print_r(Auth::user());exit();
 
-        return view('home', compact('data', 'allData'));
+        return view('home', compact('data', 'allData', 'informasis'));
     }
 
     public function tentang(){
-        return view('about');
+        $informasis = InformasiModel::first();
+        return view('about', compact('informasis'));
     }
 
     public function kontak(){
-        return view('contact');
+        $informasis = InformasiModel::first();
+        return view('contact', compact('informasis'));
     }
 
     public function produk(){
-
+        
         $allData = DB::table('produks')->join('kategoris', 'produks.kategori_id', '=', 'kategoris.kategori_id')->join('gambars', 'produks.produk_id', '=', 'gambars.produk_id', 'left')->select('produks.produk_id', 'gambars.gambar')->orderBy('produks.produk_id')->get();
         $data = DB::table('produks')->join('kategoris', 'produks.kategori_id', '=', 'kategoris.kategori_id')->select('produks.*', 'kategoris.nama as nama_kategori')->get();
         $gambars = DB::table('gambars')->join('produks', 'gambars.produk_id', '=', 'produks.produk_id', 'right')->select('produks.produk_id', DB::raw('min(gambar) as gambar'))->groupBy('produks.produk_id')->get();
         $kategoris = KategoriModel::all();
+
+        $informasis = InformasiModel::first();
 
         foreach($data as $dt){
             foreach($gambars as $gbr){
@@ -70,7 +77,7 @@ class HomeController extends Controller
         
         // echo "<pre>";print_r($allData);exit();
 
-        return view('products', compact('data', 'kategoris' ,'allData'));
+        return view('products', compact('data', 'kategoris' ,'allData', 'informasis'));
     }
 
     public function produkId($slug){
@@ -83,6 +90,7 @@ class HomeController extends Controller
         $datas = DB::table('produks')->join('kategoris', 'produks.kategori_id', '=', 'kategoris.kategori_id')->select('produks.*', 'kategoris.nama as nama_kategori')->limit(3)->get();
         $gambars = DB::table('gambars')->join('produks', 'gambars.produk_id', '=', 'produks.produk_id', 'right')->select('produks.produk_id', DB::raw('min(gambar) as gambar'))->groupBy('produks.produk_id')->get();
 
+        $informasis = InformasiModel::first();
         foreach($data as $dt){
             if(!isset($dt->gambar)){
                 $dt->gambar = "no-image.png";
@@ -108,7 +116,7 @@ class HomeController extends Controller
           
         // echo "<pre>";print_r($datas);exit();
 
-        return view('single_product', compact('data', 'kategoris', 'datas', 'allData'));
+        return view('single_product', compact('data', 'kategoris', 'datas', 'allData', 'informasis'));
     }
 
     public function produkKategori($kategori){
@@ -117,6 +125,8 @@ class HomeController extends Controller
         $data = DB::table('produks')->join('kategoris', 'produks.kategori_id', '=', 'kategoris.kategori_id')->where('kategoris.nama', $kategori)->select('produks.*', 'kategoris.nama as nama_kategori')->get();
         $gambars = DB::table('gambars')->join('produks', 'gambars.produk_id', '=', 'produks.produk_id', 'right')->select('produks.produk_id', DB::raw('min(gambar) as gambar'))->groupBy('produks.produk_id')->get();
         $kategoris = KategoriModel::all();
+
+        $informasis = InformasiModel::first();
 
         foreach($data as $dt){
             foreach($gambars as $gbr){
@@ -140,7 +150,7 @@ class HomeController extends Controller
         $data = $this->paginate($data);
         $data->withPath('produk/kategori');
 
-        return view('products', compact('data', 'kategoris', 'allData'));
+        return view('products', compact('data', 'kategoris', 'allData', 'informasis'));
     }
 
     public function myprofile($id){
@@ -152,6 +162,10 @@ class HomeController extends Controller
         }
 
         $data['datas'] = User::find($id);
+
+        $informasis = InformasiModel::first();
+
+        $data['informasis'] = $informasis;
 
         return view('myprofile', with($data));
     }

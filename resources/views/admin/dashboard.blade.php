@@ -66,6 +66,48 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                Website Information
+            </h2>
+            <div class="myform">
+                <form action="{{ route('admin.webinfo') }}" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <label for="">Nomor HP</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">+62</span>
+                            </div>
+                            <input type="text" value="{{ $informasis->no_hp }}" name="no_hp" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Alamat Email</label>
+                        <input type="email" name="email" value="{{ $informasis->email }}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tentang Kami</label>
+                        <textarea name="tentang" class="form-control" rows="5">{{ $informasis->tentang }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Alamat</label>
+                        <textarea name="alamat" class="form-control" rows="5">{{ $informasis->alamat }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Iframe Google Maps</label>
+                        <textarea name="gmaps_iframe" class="form-control" rows="5">{{ $informasis->gmaps_iframe }}</textarea>
+                    </div>
+                    <div class="form-group mb-5">
+                        <button type="submit" class="btn btn-success btn-block">
+                            Update
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 @endsection

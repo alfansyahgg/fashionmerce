@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\InformasiModel;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,8 @@ class AuthController extends Controller
         if(Auth::check()){
             return redirect()->route('home.index');
         }
-        return view('login');
+        $informasis = InformasiModel::first();
+        return view('login', compact('informasis'));
     }
 
     public function auth(Request $request){
@@ -42,7 +44,8 @@ class AuthController extends Controller
     }
 
     public function register(){
-        return view('register');
+        $informasis = InformasiModel::first();
+        return view('register', compact('informasis'));
     }
 
     public function regist(Request $request){

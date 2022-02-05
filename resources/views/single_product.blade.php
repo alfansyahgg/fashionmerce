@@ -64,7 +64,7 @@ seragam tni cimahi bandung,seragam dinas polri cimahi bandung,seragam tentara ci
 							{{ $data[0]->deskripsi }}
 						</p>
 						<div class="single-product-form">
-							<a href="https://api.whatsapp.com/send?phone=6282126909916&text=Halo%21%20Saya ingin memesan {{ strtoupper($data[0]->nama) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan via WA</a>
+							<a href="https://api.whatsapp.com/send?phone=+62{{ $informasis->no_hp }} &text=Halo%21%20Saya ingin memesan {{ strtoupper($data[0]->nama) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan via WA</a>
 							<p><strong>Categories: </strong> {{ $data[0]->nama_kategori }}  </p>
 						</div>
 						<h4>Share:</h4>
@@ -108,7 +108,7 @@ seragam tni cimahi bandung,seragam dinas polri cimahi bandung,seragam tentara ci
 						</div>
 						<a href="{{ route('home.produk.id', $dt->slug) }}"><h3 class="text-uppercase">{{ strtoupper($dt->nama) }}</h3></a>
 						<p class="product-price"><span>Harga</span> Rp. {{ number_format($dt->harga,0, '.', '.' )  }} </p>
-						<a target="_blank" href=" https://api.whatsapp.com/send?phone=6282126909916&text=Halo%21%20Saya ingin memesan {{ strtoupper($dt->nama) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan</a>
+						<a target="_blank" href=" https://api.whatsapp.com/send?phone=+62{{ $informasis->no_hp }} &text=Halo%21%20Saya ingin memesan {{ strtoupper($dt->nama) }} " class="cart-btn"><i class="fas fa-shopping-cart"></i> Pesan</a>
 						<a target="_blank" href="{{ route('home.produk.id', $dt->slug) }}" class="detail-btn">
 							<i class="fas fa-bullseye    "></i>
 							Lihat Detail

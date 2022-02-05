@@ -37,6 +37,7 @@ Route::middleware(['auth', 'MustAdmin'])->group(function () {
         Route::resource('gambar_produk', GambarProdukController::class);
         Route::resource('user', UserController::class);
 
+        Route::post('webinfo', [AdminController::class, 'webinfo'])->name('admin.webinfo');
     });
     
 });
