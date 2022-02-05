@@ -61,6 +61,7 @@
     <meta name="keywords" content="@yield("keywords")"/>
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="{{ url('') }}" />
+    <meta name="google-site-verification" content="QrOz1KutIerF89yqa6cafO2iORNKLyHdsFalrzRZ7d8" />
 
     {{-- Facebook Meta  --}}
 
