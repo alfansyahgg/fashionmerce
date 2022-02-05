@@ -5,7 +5,7 @@ PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia
 @endsection
 
 @section('keywords')
-seragam tni bandung, seragam dinas polri bandung, seragam tentara bandung, seragam pns bandung, jaket training bandung, konveksi seragam bandung, jasa pakaian bandung
+seragam tni bandung,seragam dinas polri bandung,seragam tentara bandung,seragam militer bandung,seragam pns bandung,jaket training bandung,konveksi seragam bandung,jasa pakaian bandung,pabrik seragam bandung,
 @endsection
 
 @section('title')
