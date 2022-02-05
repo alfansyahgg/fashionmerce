@@ -5,7 +5,7 @@ PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia
 @endsection
 
 @section('keywords')
-PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia Barang diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta di Bandung
+seragam tni bandung, seragam dinas polri bandung, seragam tentara bandung, seragam pns bandung, jaket training bandung, konveksi seragam bandung, jasa pakaian bandung
 @endsection
 
 @section('title')
@@ -216,34 +216,7 @@ PT BERKAH CIPTA KARYA BERSAMA
 	<!-- end shop banner -->
 
 	<!-- logo carousel -->
-	<div class="logo-carousel-section">
-		<div class="container">
-			<h1 class="text-center">
-				Mitra
-			</h1>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/1.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/2.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/3.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/4.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/5.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 	<!-- end logo carousel -->
 	
 @endsection

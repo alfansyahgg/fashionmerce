@@ -5,7 +5,7 @@ PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia
 @endsection
 
 @section('keywords')
-PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia Barang diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta di Bandung
+seragam tni bandung, seragam dinas polri bandung, seragam tentara bandung, seragam pns bandung, jaket training bandung, konveksi seragam bandung, jasa pakaian bandung
 @endsection
 
 @section('title')

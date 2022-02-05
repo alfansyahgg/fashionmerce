@@ -7,7 +7,7 @@
                     <!-- logo -->
                     <div class="site-logo">
                         <a href="/">
-                            <img src="{{ url('') }}/assets/img/header.png" alt="">
+                            <img style="height: 55px;margin-left: 20px" src="{{ url('') }}/assets/img/bckb-2.png" alt="">
                         </a>
                     </div>
                     <!-- logo -->

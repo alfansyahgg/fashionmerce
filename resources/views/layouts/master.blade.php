@@ -56,23 +56,36 @@
 
     @stack('css')
 
+    <meta content="PT BERKAH CIPTA KARYA BERSAMA &ndash; Pabrik Seragam dinas TNI - Polri di Bandung" name="title">
     <meta name="description" content="@yield("description")"/>
     <meta name="keywords" content="@yield("keywords")"/>
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="{{ url('') }}" />
 
     {{-- Facebook Meta  --}}
 
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="CV ARMYINDO SADARDJAYA &ndash; Pabrik Seragam dinas TNI - Polri di Bandung" />
-    <meta property="og:description" content="CV ARMYINDO SADARDJAYA adalah  perusahaan yang bergerak di bidang penyedia Barang diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta" />
+    <meta property="og:title" content="PT BERKAH CIPTA KARYA BERSAMA &ndash; Pabrik Seragam dinas TNI - Polri di Bandung" />
+    <meta property="og:description" content="PT BERKAH CIPTA KARYA BERSAMA adalah  perusahaan yang bergerak di bidang penyedia Barang diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta" />
     <meta property="og:url" content="https://www.armyindosadardjaya.com" />
-    <meta property="og:site_name" content="Pabrik Seragam dinas TNI - Polri di Cimahi" />
-    <meta property="og:image" content="./assets/img/logo-text.png" />
+    <meta property="og:site_name" content="Pabrik Seragam dinas TNI - Polri di Bandung" />
+    <meta property="og:image" content="{{ url('assets/img/bckb-2.png') }}" />
     <meta property="og:image:secure_url" content="./assets/img/logo-text.png" />
     {{-- <meta property="og:image:width" content="1023" />
     <meta property="og:image:height" content="576" /> --}}
     <meta property="og:image:alt" content="Pabrik Seragam dinas TNI - Polri di Bandung" />
     <meta property="og:image:type" content="image/jpeg" />
+
+    {{-- Twitter Meta  --}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PT BERKAH CIPTA KARYA BERSAMA &ndash; Pabrik Seragam dinas TNI - Polri di Bandung" />
+    <meta name="twitter:description" content="PT BERKAH CIPTA KARYA BERSAMA adalah  perusahaan yang bergerak di bidang penyedia Barang diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta" />
+    <meta name="twitter:image" content="{{ url('assets/img/bckb-2.png') }}" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="admin" />
+    <meta name="twitter:label2" content="Time to read" />
+    <meta name="twitter:data2" content="2 minutes" />
 
     <title>@yield('title')</title>
 </head>
