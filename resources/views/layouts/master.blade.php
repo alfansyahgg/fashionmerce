@@ -56,7 +56,7 @@
 
     @stack('css')
 
-    <meta content="PT BERKAH CIPTA KARYA BERSAMA &ndash; Pabrik Seragam dinas TNI - Polri di Bandung" name="title">
+    <meta content="PT BERKAH CIPTA KARYA BERSAMA &ndash; Pabrik Seragam dinas TNI - Polri di Cimahi Bandung" name="title">
     <meta name="description" content="@yield("description")"/>
     <meta name="keywords" content="@yield("keywords")"/>
     <meta name="robots" content="index,follow">
@@ -66,7 +66,7 @@
 
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PT BERKAH CIPTA KARYA BERSAMA &ndash; Pabrik Seragam dinas TNI - Polri di Bandung" />
+    <meta property="og:title" content="PT BERKAH CIPTA KARYA BERSAMA &ndash; Pabrik Seragam dinas TNI - Polri di Cimahi Bandung" />
     <meta property="og:description" content="PT BERKAH CIPTA KARYA BERSAMA adalah  perusahaan yang bergerak di bidang penyedia Barang diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta" />
     <meta property="og:url" content="https://www.armyindosadardjaya.com" />
     <meta property="og:site_name" content="Pabrik Seragam dinas TNI - Polri di Bandung" />

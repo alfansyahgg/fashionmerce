@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('description')
-PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia Barang diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta di Bandung
+PT BERKAH CIPTA KARYA BERSAMA adalah perusahaan yang bergerak di bidang penyedia Barang, SERAGAM TNI, POLRI, SATPOL PP, JAKET TRAINING diantara nya untuk keperluan Militer Pegawai Negeri maupun Swasta di Cimahi Bandung
 @endsection
 
 @section('keywords')
