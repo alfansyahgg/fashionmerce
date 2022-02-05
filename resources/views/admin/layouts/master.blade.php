@@ -10,6 +10,9 @@
     <meta name="author" content="">
     <meta name="robots" content="noindex,nofollow">
 
+    <!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="{{ url('') }}/favicon.ico">
+
     <title>
         @yield('title')
     </title>
