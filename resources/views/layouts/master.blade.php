@@ -101,7 +101,7 @@
     <!--PreLoader Ends-->
 
     {{-- Whatsapp Button --}}
-    <a href="https://api.whatsapp.com/send?phone=6282126909916&text=Halo%21%20Saya ingin memesan barang dari anda." class="float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=62{{ $informasis->no_hp }}&text=Halo%21%20Saya ingin memesan barang dari anda." class="float" target="_blank">
         <i class="fab fa-whatsapp my-float"></i>
     </a>
     

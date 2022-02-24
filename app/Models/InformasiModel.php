@@ -11,7 +11,7 @@ class InformasiModel extends Model
 
     protected $table = "informasis";
     protected $fillable = [
-        'email', 'no_hp', 'tentang', 'alamat'
+        'email', 'no_hp', 'tentang', 'alamat', 'gmaps_iframe'
     ];
     
 }
